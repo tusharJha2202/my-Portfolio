@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Jha - Creative Portfolio</title>
+    <title>Tushar Jha - Java Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <header>
-        
         <h1 class="logo">Tushar Jha</h1>
         <nav>
             <ul>
                 <li><a href="#about" title="Learn more about me">About Me</a></li>
                 <li><a href="#projects" title="Check out my projects">Projects</a></li>
                 <li><a href="#skills" title="Explore my skills">Skills</a></li>
-                <li><a href="#Education" title="My Education">Education</a></li>
+                <li><a href="#education" title="My Education">Education</a></li>
                 <li><a href="#contact" title="Get in touch with me">Let's Talk</a></li>
             </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
@@ -32,7 +37,7 @@
                 <span class="highlight word">Tushar</span>
                 <span class="highlight word">Jha</span>
             </h2>
-            <p>Aspiring JAVA Developer 🚀 <br> Passionate Problem Solver 🔥</p>
+            <p>Java Developer & BCA Student 🚀 <br> Passionate Problem Solver 🔥</p>
             <a href="resume.pdf" download class="btn">📄 Download Resume</a>
         </div>         
         <img src="profile.jpg" alt="Profile Picture of Tushar Jha">
@@ -40,22 +45,47 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About me?</h2>
-        <p>✋ <strong>Hey there! I'm Tushar</strong>, a passionate <strong>Java developer & problem solver</strong>, skilled in <strong>DSA, web development, and UI/UX design</strong>. I love <strong>building modern, scalable applications</strong> and tackling <strong>challenging coding problems</strong>.</p>
+        <h2>About Me</h2>
+        <p>✋ <strong>Hey there! I'm Tushar</strong>, a dedicated <strong>BCA student</strong> and <strong>Java developer</strong> with strong skills in <strong>DSA, web development, and database management</strong>. I'm currently seeking a <strong>Software Technician Internship position</strong> at National Instruments (Emerson) to apply my programming knowledge while developing new skills in software testing and automation.</p>
         <h3>🔹 My Goals</h3>
-        <p>Master <strong>full-stack development</strong> & sharpen <strong>DSA skills</strong> to land an exciting tech role. Always learning, always building!</p>
+        <p>Over the next 3 months, I'm focusing on <strong>strengthening my Python programming skills</strong> with emphasis on test automation, learning <strong>software testing fundamentals</strong>, gaining familiarity with <strong>CI/CD tools</strong>, and exploring <strong>test automation frameworks</strong>.</p>
         <h3>🎯 Let's Create Something Amazing!</h3>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>🚀 My Work</h2>
+        <h2>🚀 My Projects</h2>
         <div class="projects-container">
             <article class="project-card">
-                <img src="project1.png" alt="Screenshot of Online Book Store project">
-                <h3>Ecommerce Book Store</h3>
-                <p>A sleek and responsive WordPress Ecommerce website to buy books.</p>
-                <a href="https://weee5.com/" class="btn" target="_blank" title="View project online">🌍 Check it out</a>
+                <img src="project1.jpg" alt="Private Book Store Web Application">
+                <h3>Private Book Store Web App</h3>
+                <p>A custom e-commerce platform for books with restricted access, built with Node.js, Express.js, and MongoDB Atlas.</p>
+                <p class="tech-stack">Tech: Node.js | Express.js | MongoDB</p>
+                <a href="#" class="btn" title="Private Repository">🔒 Private Repo</a>
+            </article>
+            
+            <article class="project-card">
+                <img src="project2.jpg" alt="E-commerce Book Store">
+                <h3>E-commerce Book Store</h3>
+                <p>A fully functional e-commerce website with payment gateways and inventory management systems.</p>
+                <p class="tech-stack">Tech: WordPress | WooCommerce</p>
+                <a href="https://weee5.com/" class="btn" target="_blank" title="View project online">🌍 Visit Site</a>
+            </article>
+            
+            <article class="project-card">
+                <img src="project3.jpg" alt="Memory Testing Game">
+                <h3>Memory Testing Game</h3>
+                <p>An interactive memory testing game with user authentication and level selection functionality.</p>
+                <p class="tech-stack">Tech: HTML | CSS | JavaScript</p>
+                <a href="#" class="btn" target="_blank" title="View Memory Game">🎮 Play Game</a>
+            </article>
+            
+            <article class="project-card">
+                <img src="project4.jpg" alt="Portfolio Website">
+                <h3>Portfolio Website</h3>
+                <p>A responsive personal portfolio website showcasing projects, skills, and educational background.</p>
+                <p class="tech-stack">Tech: HTML | CSS | JavaScript</p>
+                <a href="#" class="btn" target="_blank" title="You're already here!">📍 You're Here!</a>
             </article>
         </div>
     </section>
@@ -67,32 +97,65 @@
             <div class="skill-category">
                 <h3>Programming Languages</h3>
                 <div class="skill">Java</div>
-                <div class="skill">C/C++</div>
-                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">C</div>
+                <div class="skill">C++</div>
             </div>
             <div class="skill-category">
                 <h3>Web Development</h3>
                 <div class="skill">HTML</div>
                 <div class="skill">CSS</div>
-                <div class="skill">React.js</div>
-                <div class="skill">WordPress</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Express.js</div>
             </div>
             <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <div class="skill">Problem Solving</div>
-                <div class="skill">Teamwork</div>
-                <div class="skill">Time Management</div>
+                <h3>Other Technologies</h3>
+                <div class="skill">MongoDB Atlas</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">WordPress</div>
+                <div class="skill">WooCommerce</div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="Education">     
-        <div class="education">
-            <h3>🎓 Education</h3>
-            <p><strong>Pursuing Bachelor of Computer Applications</strong> in AI/ML</p>
-            <p>From Galgotias University | 2023 - 2026</p>
-            <p>Favourite Subject: DSA, WebDev, DBMS, OS etc.</p>
+    <section id="education">     
+        <h2>🎓 Education</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p>Galgotias University, Greater Noida</p>
+                <p><strong>Expected:</strong> 2026 | Currently in Semester 4</p>
+                <p><strong>Key Courses:</strong> Data Structures and Algorithms, OOP, DBMS, Web Development</p>
+            </div>
+            
+            <div class="education-card">
+                <h3>Senior Secondary (12th) - CBSE</h3>
+                <p>S B V (JAI PRAKASH NARAYAN) E.VINOD NAGAR DELHI</p>
+                <p><strong>Completion:</strong> 2021 | <strong>Percentage:</strong> 70.6%</p>
+            </div>
+            
+            <div class="education-card">
+                <h3>Secondary (10th) - CBSE</h3>
+                <p>G SARVODAYA BOYS SSS PKT-B PH-II MAYUR VIHAR DLI</p>
+                <p><strong>Completion:</strong> 2019 | <strong>Percentage:</strong> 69.3%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>🏆 Certifications</h2>
+        <div class="certifications-container">
+            <div class="certification-card">
+                <h3>IBM Certificate</h3>
+                <p>Machine Learning Basics</p>
+            </div>
+            <div class="certification-card">
+                <h3>NPTEL Certificate</h3>
+                <p>Entrepreneurship</p>
+            </div>
         </div>
     </section>
 
@@ -107,15 +170,15 @@
             </div>
             <div class="detail-item">
                 <h4>Phone</h4>
-                <p><a href="#">soon</a></p>
-            </div>
-            <div class="detail-item">
-                <h4>LinkedIn</h4>
-                <p><a href="#" target="_blank" title="Connect with me on LinkedIn">soon</a></p>
+                <p><a href="tel:+919560625940">+91 9560 625 940</a></p>
             </div>
             <div class="detail-item">
                 <h4>GitHub</h4>
                 <p><a href="https://github.com/tusharjha2202" target="_blank" title="Check out my GitHub">github.com/tusharjha2202</a></p>
+            </div>
+            <div class="detail-item">
+                <h4>LinkedIn</h4>
+                <p><a href="https://linkedin.com/in/tusharjha2202" target="_blank" title="Connect with me on LinkedIn">linkedin.com/in/tusharjha2202</a></p>
             </div>
         </div>
     </section>
