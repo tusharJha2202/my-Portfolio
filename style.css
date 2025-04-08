@@ -673,3 +673,169 @@ footer p {
         padding: 15px;
     }
 }
+
+/* Additional animations and improvements */
+
+/* Skill category animation delays */
+.skill-category:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.skill-category:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.skill-category:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Project cards animation */
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: calc(0.2s * var(--i, 0));
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlight text */
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 8px;
+    background-color: rgba(240, 165, 0, 0.3);
+    z-index: -1;
+    border-radius: 4px;
+    transform: skew(-15deg);
+}
+
+/* Profile image animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero img {
+    animation: float 6s ease-in-out infinite, pulse 3s infinite alternate;
+}
+
+/* Enhanced mobile menu */
+@media (max-width: 992px) {
+    nav ul {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+    
+    nav ul li a::after {
+        display: none;
+    }
+    
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f0a500;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+}
+
+/* Improved section animations */
+section {
+    overflow: hidden;
+}
+
+section h2 {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 10px;
+    }
+    
+    .skill-category, 
+    .project-card,
+    .education-card {
+        width: 100%;
+    }
+    
+    .projects-container,
+    .skills-container,
+    .education-container {
+        gap: 20px;
+    }
+    
+    #contact {
+        padding: 30px 15px;
+    }
+}
+
+/* Print styles for resume */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    header, footer, #scrollToTopBtn, .menu-toggle {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        padding: 20px 0;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .project-card, .skill-category, .education-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
